@@ -246,7 +246,7 @@ If you want to enforce a coding style for your project, consider using [Prettier
 
 Visual Studio Code supports debugging out of the box with Create React App. This enables you as a developer to write and debug your React code without leaving the editor, and most importantly it enables you to have a continuous development workflow, where context switching is minimal, as you don’t have to switch between tools.
 
-You would need to have the latest version of [VS Code](https://code.visualstudio.com) and VS Code [Chrome Debugger Extension](https://marketplace.visualstudio.com/todos?itemName=msjsdiag.debugger-for-chrome) installed.
+You would need to have the latest version of [VS Code](https://code.visualstudio.com) and VS Code [Chrome Debugger Extension](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) installed.
 
 Then add the block below to your `launch.json` file and put it inside the `.vscode` folder in your app’s root directory.
 
@@ -487,7 +487,7 @@ For example, this:
 .App {
   display: flex;
   flex-direction: row;
-  align-todos: center;
+  align-items: center;
 }
 ```
 
@@ -504,7 +504,7 @@ becomes this:
           flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-todos: center;
+          align-items: center;
 }
 ```
 
