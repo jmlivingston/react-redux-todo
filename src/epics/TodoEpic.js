@@ -6,10 +6,10 @@ import uuid from 'uuid'
 import { todoTypes } from '../types'
 
 const todoEpic = action$ => action$
-  .ofType(todoTypes.TODO_GET)
+  .ofType(todoTypes.GET)
   .switchMap(() =>
     Observable.of({
-        type: todoTypes.TODO_GET_COMPLETE,
+        type: todoTypes.GET_COMPLETE,
         todos: [{
             id: uuid(),
             text: 'Wash dishes',

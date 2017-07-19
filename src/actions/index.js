@@ -1,16 +1,16 @@
 import { filterTypes, todoTypes } from '../types'
 
 export const todoAdd = text => ({
-  type: todoTypes.TODO_ADD
+  type: todoTypes.ADD
 })
 
 export const todoChange = todoAddValue => ({
-  type: todoTypes.TODO_CHANGE,
+  type: todoTypes.CHANGE,
   todoAddValue
 })
 
 export const todoToggle = id => ({
-  type: todoTypes.TODO_TOGGLE,
+  type: todoTypes.TOGGLE,
   id
 })
 

@@ -4,7 +4,7 @@ import { todoTypes } from '../types'
 
 const todo = (state = { todos: [], todoAddValue: '', error: '' }, action) => {
   switch (action.type) {
-    case todoTypes.TODO_ADD:
+    case todoTypes.ADD:
       if(!state.todoAddValue.trim()) {
         return { ...state, error: 'Empty todo not allowed.' }
       }
@@ -21,17 +21,17 @@ const todo = (state = { todos: [], todoAddValue: '', error: '' }, action) => {
         error: '',
         todoAddValue: ''
       }
-    case todoTypes.TODO_CHANGE:
+    case todoTypes.CHANGE:
       return {
         ...state,
         todoAddValue: action.todoAddValue
       }
-    case todoTypes.TODO_GET_COMPLETE:
+    case todoTypes.GET_COMPLETE:
       return {
         ...state,
         todos: action.todos
       }            
-    case todoTypes.TODO_TOGGLE:
+    case todoTypes.TOGGLE:
       return {
         ...state,
         todos: state.todos.map(todo =>

@@ -1,14 +1,16 @@
+const prefix = 'TODO_'
+
 export const todoTypes = {
-    TODO_ADD: 'TODO_ADD',
-    TODO_CHANGE: 'TODO_CHANGE',
-    TODO_GET: 'TODO_GET',
-    TODO_GET_COMPLETE: 'TODO_GET_COMPLETE',
-    TODO_TOGGLE: 'TODO_TOGGLE'
+    ADD: prefix + 'ADD',
+    CHANGE: prefix + 'CHANGE',
+    GET: prefix + 'GET',
+    GET_COMPLETE: prefix + 'GET_COMPLETE',
+    TOGGLE: prefix + 'TOGGLE'
 }
 
 export const filterTypes = {
-    SET_VISIBILITY_FILTER: 'SET_VISIBILITY_FILTER',
-    SHOW_ALL: 'SHOW_ALL',
-    SHOW_ACTIVE: 'SHOW_ACTIVE',
-    SHOW_COMPLETED: 'SHOW_COMPLETED'
+    SET_VISIBILITY_FILTER: prefix + 'SET_VISIBILITY_FILTER',
+    SHOW_ALL: prefix + 'SHOW_ALL',
+    SHOW_ACTIVE: prefix + 'SHOW_ACTIVE',
+    SHOW_COMPLETED: prefix + 'SHOW_COMPLETED'
 }

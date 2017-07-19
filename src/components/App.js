@@ -14,6 +14,6 @@ const App = () => (
   </div>
 )
 
-store.dispatch({ type: todoTypes.TODO_GET })
+store.dispatch({ type: todoTypes.GET })
 
 export default App
