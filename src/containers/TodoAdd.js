@@ -9,10 +9,10 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  todoChange: value => {
+  todoChange(value) {
     dispatch(todoChange(value))
   },
-  todoSubmit: () => {
+  todoSubmit() {
     dispatch(todoAdd())
   }
 })
