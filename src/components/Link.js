@@ -4,7 +4,7 @@ import React from 'react'
 const Link = ({ active, children, onClick }) => {
   const linkClick = e => {
     e.preventDefault()
-    onClick()
+    onClick(e.target.innerText)
   }
   return (
     <button className={`btn btn-info btn-sm ${active && 'active'}`}

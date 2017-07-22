@@ -6,11 +6,16 @@ import store from '../stores'
 import TodoAdd from '../containers/TodoAdd'
 import VisibleTodoList from '../containers/VisibleTodoList'
 
+import Link from '../components/Link'
+
 const App = () => (
   <div className='container mt-3'>
     <TodoAdd />
     <VisibleTodoList />
     <Footer />
+    <Link active={ false } onClick={ console.log }>
+      test
+    </Link>
   </div>
 )
 
