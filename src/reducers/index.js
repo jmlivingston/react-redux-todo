@@ -3,9 +3,9 @@ import { combineReducers } from 'redux'
 import todo from './TodoReducer'
 import visibilityFilter from './VisibilityReducer'
 
-const todoApp = combineReducers({
+const reducers = combineReducers({
   todo,
   visibilityFilter
 })
 
-export default todoApp
+export default reducers
