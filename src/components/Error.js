@@ -8,7 +8,7 @@ const Error = ({ error }) => {
     return <div className='alert alert-danger'>{ error }</div>
 }
 
-Error.propTypes ={
+Error.propTypes = {
     error: PropTypes.string
 }
 
