@@ -1,10 +1,10 @@
 import uuid from 'uuid'
 
-import { todoTypes } from '../types'
+import { TODO } from '../config/constants'
 
 const todo = (state = { todos: [], todoAddValue: '', error: '' }, action) => {
   switch (action.type) {
-    case todoTypes.ADD:
+    case TODO.ADD:
       if(!state.todoAddValue.trim()) {
         return { ...state, error: 'Empty todo not allowed.' }
       }
@@ -21,17 +21,17 @@ const todo = (state = { todos: [], todoAddValue: '', error: '' }, action) => {
         error: '',
         todoAddValue: ''
       }
-    case todoTypes.CHANGE:
+    case TODO.CHANGE:
       return {
         ...state,
         todoAddValue: action.todoAddValue
       }
-    case todoTypes.GET_COMPLETE:
+    case TODO.GET_COMPLETE:
       return {
         ...state,
         todos: action.todos
       }            
-    case todoTypes.TOGGLE:
+    case TODO.TOGGLE:
       return {
         ...state,
         todos: state.todos.map(todo =>

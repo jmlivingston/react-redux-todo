@@ -7,7 +7,7 @@ const Link = ({ active, children, onClick }) => {
     onClick(e.target.innerText)
   }
   return (
-    <button className={`btn btn-info btn-sm ${active && 'active'}`}
+    <button className={`btn btn-primary btn-sm ${active && 'active'}`}
       disabled={active} onClick={linkClick}
     >
       {children}

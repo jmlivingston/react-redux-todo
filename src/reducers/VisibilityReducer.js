@@ -1,8 +1,8 @@
-import { filterTypes } from '../types'
+import { FILTER } from '../config/constants'
 
-const visibilityFilter = (state = filterTypes.SHOW_ALL, action) => {
+const visibilityFilter = (state = FILTER.SHOW_ALL, action) => {
   switch (action.type) {
-    case filterTypes.SET_VISIBILITY_FILTER:
+    case FILTER.SET_VISIBILITY_FILTER:
       return action.filter
     default:
       return state

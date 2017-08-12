@@ -1,17 +1,17 @@
 import React from 'react'
 
-import { filterTypes } from '../types'
+import { FILTER } from '../config/constants'
 import FilterLink from '../containers/FilterLink'
 
 const Footer = () => (
   <div className='btn-group'>
-    <FilterLink filter={ filterTypes.SHOW_ALL }>
+    <FilterLink filter={ FILTER.SHOW_ALL }>
       All
     </FilterLink>
-    <FilterLink filter={ filterTypes.SHOW_ACTIVE }>
+    <FilterLink filter={ FILTER.SHOW_ACTIVE }>
       Active
     </FilterLink>
-    <FilterLink filter={ filterTypes.SHOW_COMPLETED }>
+    <FilterLink filter={ FILTER.SHOW_COMPLETED }>
       Completed
     </FilterLink>
   </div>

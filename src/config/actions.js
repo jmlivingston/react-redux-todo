@@ -1,20 +1,20 @@
-import { filterTypes, todoTypes } from '../types'
+import { FILTER, TODO } from '../config/constants'
 
 export const todoAdd = text => ({
-  type: todoTypes.ADD
+  type: TODO.ADD
 })
 
 export const todoChange = todoAddValue => ({
-  type: todoTypes.CHANGE,
+  type: TODO.CHANGE,
   todoAddValue
 })
 
 export const todoToggle = id => ({
-  type: todoTypes.TOGGLE,
+  type: TODO.TOGGLE,
   id
 })
 
 export const setVisibilityFilter = filter => ({
-  type: filterTypes.SET_VISIBILITY_FILTER,
+  type: FILTER.SET_VISIBILITY_FILTER,
   filter
 })

@@ -6,7 +6,7 @@ import React from 'react'
 
 import './index.css'
 import App from './components/App'
-import store from './stores'
+import store from './config/store'
 
 render(
   <Provider store={store}>

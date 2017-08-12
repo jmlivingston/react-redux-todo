@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { todoAdd, todoChange } from '../actions'
+import { todoAdd, todoChange } from '../config/actions'
 import TodoAddForm from '../components/TodoAddForm'
 
 const mapStateToProps = state => ({
