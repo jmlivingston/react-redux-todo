@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import { MIDDLEWARE, TODO } from '../config/constants'
 import { todoGetThunk } from '../reducers/TodoThunk'
 import { todos } from '../data'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 import store from '../config/store'
-import TodoAdd from '../containers/TodoAdd'
-import VisibleTodoList from '../containers/VisibleTodoList'
+import TodoAdd from './TodoAdd'
+import VisibleTodoList from './VisibleTodoList'
 
 class App extends Component {
   state = {
