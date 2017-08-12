@@ -17,6 +17,7 @@ export const FILTER = {
 }
 
 export const MIDDLEWARE = {
+  NONE: 'None',
   OBSERVABLE: 'Observable',
   SAGA: 'Saga',
   THUNK: 'Thunk'

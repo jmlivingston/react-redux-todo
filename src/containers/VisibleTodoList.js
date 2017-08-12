@@ -1,10 +1,8 @@
 import { connect } from 'react-redux'
 
-import { FILTER, MIDDLEWARE } from '../config/constants'
-import { todoGetThunk } from '../reducers/TodoThunk'
+import { FILTER } from '../config/constants'
 import { todoToggle } from '../config/actions'
 import TodoList from '../components/TodoList'
-import { TODO } from '../config/constants'
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {
@@ -23,25 +21,7 @@ const mapStateToProps = state => ({
   todos: getVisibleTodos(state.todo.todos, state.visibilityFilter)
 })
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  get () {
-    switch (ownProps.middleware) {
-      case MIDDLEWARE.OBSERVABLE:
-        dispatch({ type: TODO.GET_OBSERVABLE })
-        break;
-      case MIDDLEWARE.SAGA:
-        dispatch({ type: TODO.GET_SAGA })
-        break;
-      case MIDDLEWARE.THUNK:
-        todoGetThunk().then(todos => {
-          dispatch({ type: TODO.GET_COMPLETE, todos })
-        })        
-        break;
-      default:
-        return null
-    }
-
-  },
+const mapDispatchToProps = dispatch => ({
   onTodoClick (id) {
     dispatch(todoToggle(id))
   }

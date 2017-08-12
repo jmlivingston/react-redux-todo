@@ -2,16 +2,14 @@ import 'rxjs/add/observable/of'
 import 'rxjs/add/operator/switchMap'
 import { Observable } from 'rxjs/Observable'
 
-import todos from './dummyData'
 import { TODO } from '../config/constants'
+import { todosEpic } from './../data'
 
-const todoEpic = action$ => action$
+export const todoGetEpic = action$ => action$
   .ofType(TODO.GET_OBSERVABLE)
   .switchMap(() =>
     Observable.of({
-        type: TODO.GET_COMPLETE,
-        todos
+      type: TODO.GET_COMPLETE,
+      todos: todosEpic
     })
   )
-
-export default todoEpic
