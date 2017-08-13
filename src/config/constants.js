@@ -3,10 +3,11 @@ const prefix = 'TODO_'
 export const TODO = {
     ADD: prefix + 'ADD',
     CHANGE: prefix + 'CHANGE',
-    GET_OBSERVABLE: prefix + 'GET_OBSERVABLE',
-    GET_SAGA: prefix + 'GET_SAGA',
+    GET_TODO_OBSERVABLE: prefix + 'GET_TODO_OBSERVABLE',
+    GET_TODO_SAGA: prefix + 'GET_TODO_SAGA',
     GET_COMPLETE: prefix + 'GET_COMPLETE',
-    TOGGLE: prefix + 'TOGGLE'
+    TOGGLE: prefix + 'TOGGLE',
+    UPDATE_MIDDLEWARE: prefix + 'UPDATE_MIDDLEWARE'
 }
 
 export const FILTER = {

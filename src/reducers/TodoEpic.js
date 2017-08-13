@@ -6,7 +6,7 @@ import { TODO } from '../config/constants'
 import { todosEpic } from './../data'
 
 export const todoGetEpic = action$ => action$
-  .ofType(TODO.GET_OBSERVABLE)
+  .ofType(TODO.GET_TODO_OBSERVABLE)
   .switchMap(() =>
     Observable.of({
       type: TODO.GET_COMPLETE,

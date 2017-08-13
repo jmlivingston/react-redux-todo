@@ -12,6 +12,7 @@ const reducers = combineReducers({
   todo,
   visibilityFilter
 })
+
 const sagas = [todoSaga]
 
 export { epics, reducers, sagas }

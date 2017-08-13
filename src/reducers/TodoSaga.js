@@ -8,5 +8,5 @@ function* todoGetSaga () {
 }
 
 export function* todoSaga() {
-  yield takeEvery(TODO.GET_SAGA, todoGetSaga);
+  yield takeEvery(TODO.GET_TODO_SAGA, todoGetSaga);
 }

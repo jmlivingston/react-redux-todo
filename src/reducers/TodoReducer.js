@@ -4,16 +4,21 @@ import { TODO } from '../config/constants'
 
 const todo = (state = { todos: [], todoAddValue: '', error: '' }, action) => {
   switch (action.type) {
+    case TODO.UPDATE_MIDDLEWARE:
+      return {
+        ...state,
+        middleware: action.middleware
+      }
     case TODO.ADD:
-      if(!state.todoAddValue.trim()) {
+      if (!state.todoAddValue.trim()) {
         return { ...state, error: 'Empty todo not allowed.' }
       }
-      if(state.todos.find(todo => todo.text === state.todoAddValue)) {
+      if (state.todos.find(todo => todo.text === state.todoAddValue)) {
         return { ...state, error: 'Duplicate todo not allowed.' }
       }
       return {
         ...state,
-        todos: [ ...state.todos, {
+        todos: [...state.todos, {
           id: uuid(),
           text: state.todoAddValue,
           completed: false
@@ -30,7 +35,7 @@ const todo = (state = { todos: [], todoAddValue: '', error: '' }, action) => {
       return {
         ...state,
         todos: action.todos
-      }            
+      }
     case TODO.TOGGLE:
       return {
         ...state,
