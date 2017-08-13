@@ -1,11 +1,9 @@
 {
   "name": "react-redux-todo",
-  "homepage": "https://jmlivingston.github.io/react-redux-todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "gh-pages": "^1.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -15,17 +13,23 @@
     "redux-saga": "^0.15.6",
     "redux-thunk": "^2.2.0",
     "rxjs": "^5.4.2",
+    "serve": "^6.0.6",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
+    "cpx": "^1.5.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "debug": "react-scripts start",
+    "start": "serve",
+    "build": "react-scripts build && cpx package.json build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "git subtree push --prefix build origin deploy",
+    "postinstall": "npm install bootstrap prop-types react react-dom react-redux redux redux-observable redux-saga redux-thunk rxjs serve uuid"
+  },
+  "engines": {
+    "node": ">=7.2.1"
   }
 }
