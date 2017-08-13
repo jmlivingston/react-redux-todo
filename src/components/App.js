@@ -10,6 +10,7 @@ const App = () => <div className='container mt-3'>
   <TodoAdd />
   <VisibleTodoList />
   <Footer />
+  <hr />
   <MiddlewareSelector />
 </div>
 

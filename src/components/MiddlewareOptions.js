@@ -7,7 +7,6 @@ class MiddlewareOptions extends Component {
 
   render () {
     return <div>
-      <hr />
       <h4>Middleware Option</h4>
       <div className="custom-controls-stacked">
         {
